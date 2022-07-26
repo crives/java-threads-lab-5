@@ -1,6 +1,6 @@
 public class SavingsAccount {
 
-  private long total = 0;
+  private volatile long total = 0;
 
   public synchronized boolean withdraw(long amount) {
       if (total - amount < 0) {
